@@ -1,0 +1,330 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+    background: #f4f9ff;
+    color: #033f63;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 18px clamp(20px, 5vw, 60px);
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 18px;
+}
+
+nav a {
+    margin-left: 0;
+    text-decoration: none;
+    font-weight: bold;
+    color: #033f63;
+}
+
+nav a:hover {
+    color: #1a73e8;
+}
+
+.hero {
+    display: flex;
+    gap: clamp(30px, 5vw, 70px);
+    padding: clamp(45px, 7vw, 80px) clamp(20px, 6vw, 80px);
+    background: #e8f3ff;
+    align-items: center;
+}
+
+.hero-text,
+.hero-image {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.15;
+    color: #033f63;
+    margin-top: 0;
+}
+
+.hero-text p {
+    font-size: clamp(16px, 2vw, 18px);
+    max-width: 680px;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #1a73e8;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-image {
+    text-align: center;
+}
+
+.hero-image img {
+    width: min(100%, 480px);
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Sections */
+.section {
+    padding: clamp(45px, 6vw, 70px) clamp(20px, 6vw, 80px);
+    text-align: center;
+}
+
+.section h2,
+.workflow h2 {
+    font-size: clamp(25px, 4vw, 36px);
+    margin-top: 0;
+}
+
+.section p {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Overview */
+.overview-img {
+    width: min(100%, 420px);
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Automation Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.card,
+.tech-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    height: 100%;
+}
+
+.card h3,
+.tech-card h3 {
+    margin-top: 8px;
+}
+
+.card p,
+.tech-card p {
+    margin-bottom: 0;
+}
+
+.automation .card img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+/* Technology */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.tech-card img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+/* Dashboard */
+.dashboard-section img {
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Workflow */
+.workflow {
+    padding: clamp(45px, 6vw, 70px) clamp(20px, 6vw, 80px);
+    background: #dbefff;
+    text-align: center;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.step {
+    background: white;
+    padding: 20px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.step span {
+    display: block;
+    font-size: 24px;
+    background: #1a73e8;
+    color: white;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    line-height: 40px;
+}
+
+/* Contact */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(100%, 500px);
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #1a73e8;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.contact textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form button {
+    padding: 12px 24px;
+    background: #1a73e8;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    margin-top: 40px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        padding-right: 0;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    header {
+        position: static;
+        flex-direction: column;
+        padding: 18px 20px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 10px 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .grid,
+    .tech-grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .card,
+    .tech-card {
+        padding: 22px;
+    }
+
+    .section,
+    .workflow {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
